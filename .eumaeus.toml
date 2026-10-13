@@ -1,0 +1,2 @@
+# A declared shell prefix that always fails: eumaeus fails the job instead of dropping it.
+shell = "false"
