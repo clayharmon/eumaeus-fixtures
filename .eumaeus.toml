@@ -1,0 +1,4 @@
+# Overrides what eumaeus would detect from flake.nix.
+setup = "nix develop -c bash -c 'hello > /tmp/eumaeus-setup'"
+shell = "nix develop -c"
+cache = ["build"]

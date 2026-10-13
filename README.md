@@ -1,5 +1,5 @@
-# eumaeus fixtures: flake
+# eumaeus fixtures: toml
 
 A test fixture for [eumaeus](https://github.com/clayharmon/eumaeus) per-repo environments (`docs/m5-environments.md`).
 
-`flake.nix` provides `hello` in its default dev shell. eumaeus runs the agent under `nix develop -c`.
+`.eumaeus.toml` sets all three keys on top of the `flake` branch: `setup` writes `/tmp/eumaeus-setup`, `shell` is `nix develop -c`, and `build/` is a cache path kept on the disk between jobs.
