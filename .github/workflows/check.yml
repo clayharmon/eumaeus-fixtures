@@ -1,0 +1,13 @@
+# Fails until the commit has ok.txt containing exactly the line "ok". eumaeus's CI watcher tests use it.
+name: check
+on: push
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: ok.txt says ok
+        run: |
+          test -f ok.txt || { echo "::error file=ok.txt::ok.txt is missing; create it with the single line: ok"; exit 1; }
+          grep -qx ok ok.txt || { echo "::error file=ok.txt::ok.txt must contain exactly the line: ok"; exit 1; }
+          echo "ok.txt says ok"
