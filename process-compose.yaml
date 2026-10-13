@@ -1,0 +1,4 @@
+version: "0.5"
+processes:
+  ticker:
+    command: while true; do date > /tmp/eumaeus-ticker; sleep 1; done
