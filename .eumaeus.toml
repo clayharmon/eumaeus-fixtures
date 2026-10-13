@@ -1,0 +1,3 @@
+# The shell prefix comes from flake.nix: nix develop -c.
+setup = "nix develop -c bash scripts/pg-start.sh"
+cache = ["target", "~/.cargo"]
