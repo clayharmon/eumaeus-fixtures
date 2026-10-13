@@ -1,5 +1,5 @@
-# eumaeus fixtures: flake
+# eumaeus fixtures: bad-toml
 
 A test fixture for [eumaeus](https://github.com/clayharmon/eumaeus) per-repo environments (`docs/m5-environments.md`).
 
-`flake.nix` provides `hello` in its default dev shell. eumaeus runs the agent under `nix develop -c`.
+`.eumaeus.toml` misspells `shell` as `shel`. eumaeus fails the job before a VM boots.
