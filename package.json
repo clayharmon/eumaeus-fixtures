@@ -1,0 +1,7 @@
+{
+  "name": "eumaeus-fixture-web",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js"
+  }
+}
